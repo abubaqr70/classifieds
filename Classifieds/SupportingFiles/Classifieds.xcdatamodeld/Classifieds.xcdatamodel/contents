@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20B50" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AdsModel" representedClassName="AdsModel" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
+        <attribute name="uid" optional="YES" attributeType="String"/>
+        <relationship name="imagesThumbnail" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImagesThumbnails" inverseName="adsThumbnail" inverseEntity="ImagesThumbnails"/>
+        <relationship name="imagesUrl" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImagesURL" inverseName="adsUrl" inverseEntity="ImagesURL"/>
+    </entity>
+    <entity name="ImagesThumbnails" representedClassName="ImagesThumbnails" syncable="YES" codeGenerationType="class">
+        <attribute name="imageUrlsThumbnails" optional="YES" attributeType="String"/>
+        <relationship name="adsThumbnail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AdsModel" inverseName="imagesThumbnail" inverseEntity="AdsModel"/>
+    </entity>
+    <entity name="ImagesURL" representedClassName="ImagesURL" syncable="YES" codeGenerationType="class">
+        <attribute name="imageUrls" optional="YES" attributeType="String"/>
+        <relationship name="adsUrl" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AdsModel" inverseName="imagesUrl" inverseEntity="AdsModel"/>
+    </entity>
+    <elements>
+        <element name="AdsModel" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="ImagesThumbnails" positionX="-54" positionY="-9" width="128" height="59"/>
+        <element name="ImagesURL" positionX="-36" positionY="9" width="128" height="59"/>
+    </elements>
+</model>
