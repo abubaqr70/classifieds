@@ -19,7 +19,6 @@ import UIKit
         let seperatorView = UIView(frame: CGRect(x: 50, y: 0, width: 10, height: 50))
         view.addSubview(seperatorView)
         if !ImageIconOnRight {
-            
             self.leftViewMode = .always
             view.addSubview(imageView)
             self.leftViewMode = UITextField.ViewMode.always
@@ -32,6 +31,7 @@ import UIKit
             self.rightView = view
         }
     }
+    
     @IBInspectable var ImageIconOnRight: Bool = false
     @IBInspectable var AddImageIcon: Bool = false {
         didSet {
@@ -40,18 +40,19 @@ import UIKit
             }
         }
     }
+    
     @IBInspectable var IconImage: UIImage = UIImage(){
         didSet{
             addIcon(andImage: IconImage)
         }
     }
+    
     @IBInspectable var cornerRadius: CGFloat = 0 {
         
         didSet {
             self.layer.cornerRadius = cornerRadius
         }
     }
-    
     
     @IBInspectable var borderWidth: CGFloat  = 0 {
         
@@ -60,16 +61,12 @@ import UIKit
         }
     }
     
-    
     @IBInspectable var borderColor: UIColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0) {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
         
     }
-    
-    
-    
     
     @IBInspectable var shadowColor: UIColor? {
         get {
@@ -80,7 +77,6 @@ import UIKit
         }
     }
     
-    
     @IBInspectable var shadowOpacity: Float {
         get {
             return self.layer.shadowOpacity
@@ -89,7 +85,6 @@ import UIKit
             self.layer.shadowOpacity = newValue
         }
     }
-    
     
     @IBInspectable var shadowOffset: CGSize {
         get {
@@ -100,7 +95,6 @@ import UIKit
         }
     }
     
-    
     @IBInspectable var shadowRadius: Double {
         get {
             return Double(self.layer.shadowRadius)
@@ -109,6 +103,7 @@ import UIKit
             self.layer.shadowRadius = CGFloat(newValue)
         }
     }
+    
     @IBInspectable var paddingLeftCustom: CGFloat {
         get {
             return leftView!.frame.size.width

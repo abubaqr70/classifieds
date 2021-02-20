@@ -18,6 +18,7 @@ class AdsListViewController: UIViewController {
         objVM?.delegate = self
         objVM?.viewDidLoad()
         clearNavigation()
+        tblAdsList.accessibilityIdentifier = "table--adsList"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "appColor") as Any]
         objVM?.createSearchBar(viewSearch: searchBar)
         self.tblAdsList.register(UINib(nibName: "AdsListingTableViewCell", bundle: nil), forCellReuseIdentifier: "AdsListingTableViewCell")

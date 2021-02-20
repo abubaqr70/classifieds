@@ -48,16 +48,20 @@ class ApiManager: NSObject {
     class func getRequest(with url: String,parameters: [String:Any]?, completion: @escaping (_ result: VoidResult) -> ())
     {
         print(url)
-        AF.request(url,method: .get, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers:ApiManager.headers()).responseJSON { (response:AFDataResponse<Any>) in
-            if let jsonObject = response.value
-            {
-                let json = JSON(jsonObject)
-                completion(.success(result: json))
-            } else if let error = response.error {
-                completion(.failure(error as NSError))
-            } else {
-                fatalError("No error, no failure")
+        if Reachability.isConnectedToNetwork(){
+            AF.request(url,method: .get, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers:ApiManager.headers()).responseJSON { (response:AFDataResponse<Any>) in
+                if let jsonObject = response.value
+                {
+                    let json = JSON(jsonObject)
+                    completion(.success(result: json))
+                } else if let error = response.error {
+                    completion(.failure(error as NSError))
+                } else {
+                    fatalError("No error, no failure")
+                }
             }
+        }else{
+            Functions.noInternetConnection(status: true)
         }
     }
 }

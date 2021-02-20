@@ -10,6 +10,7 @@ target 'Classifieds' do
 	pod 'Alamofire'
 	pod 'SDWebImage', '~> 5.0'
   pod 'IQKeyboardManagerSwift'
+  pod 'SwiftMessages'
   target 'ClassifiedsTests' do
     inherit! :search_paths
     # Pods for testing

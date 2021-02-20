@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		67AF50B7B7A321AC20FEEA4A /* Pods_ClassifiedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD93ECFD6CFC58E78940044C /* Pods_ClassifiedsTests.framework */; };
+		C66E795C25E0E2E00048970C /* AdsListTableViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E795B25E0E2E00048970C /* AdsListTableViewTest.swift */; };
+		C66E796A25E0EB9B0048970C /* ApiManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E796925E0EB9B0048970C /* ApiManagerTest.swift */; };
+		C67163BB25E0D2170033AE47 /* FunctionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67163BA25E0D2170033AE47 /* FunctionsTest.swift */; };
 		C6942A2225DF899A00245ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6942A2125DF899A00245ACF /* AppDelegate.swift */; };
 		C6942A2925DF899A00245ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6942A2725DF899A00245ACF /* Main.storyboard */; };
 		C6942A2C25DF899A00245ACF /* Classifieds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6942A2A25DF899A00245ACF /* Classifieds.xcdatamodeld */; };
@@ -66,6 +69,9 @@
 		6E7DB44DFAB33F6CAB66CB21 /* Pods-Classifieds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Classifieds.release.xcconfig"; path = "Target Support Files/Pods-Classifieds/Pods-Classifieds.release.xcconfig"; sourceTree = "<group>"; };
 		87933DF1B5CCF628E36E1E26 /* Pods_Classifieds_ClassifiedsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Classifieds_ClassifiedsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AD018FB47B53DA8506C7E3 /* Pods-ClassifiedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassifiedsTests.release.xcconfig"; path = "Target Support Files/Pods-ClassifiedsTests/Pods-ClassifiedsTests.release.xcconfig"; sourceTree = "<group>"; };
+		C66E795B25E0E2E00048970C /* AdsListTableViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListTableViewTest.swift; sourceTree = "<group>"; };
+		C66E796925E0EB9B0048970C /* ApiManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerTest.swift; sourceTree = "<group>"; };
+		C67163BA25E0D2170033AE47 /* FunctionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsTest.swift; sourceTree = "<group>"; };
 		C6942A1E25DF899A00245ACF /* Classifieds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Classifieds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6942A2125DF899A00245ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6942A2825DF899A00245ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -194,6 +200,8 @@
 			children = (
 				C6942A3B25DF899B00245ACF /* ClassifiedsTests.swift */,
 				C6942A3D25DF899B00245ACF /* Info.plist */,
+				C67163BA25E0D2170033AE47 /* FunctionsTest.swift */,
+				C66E796925E0EB9B0048970C /* ApiManagerTest.swift */,
 			);
 			path = ClassifiedsTests;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 			children = (
 				C6942A4625DF899B00245ACF /* ClassifiedsUITests.swift */,
 				C6942A4825DF899B00245ACF /* Info.plist */,
+				C66E795B25E0E2E00048970C /* AdsListTableViewTest.swift */,
 			);
 			path = ClassifiedsUITests;
 			sourceTree = "<group>";
@@ -653,6 +662,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6942A3C25DF899B00245ACF /* ClassifiedsTests.swift in Sources */,
+				C67163BB25E0D2170033AE47 /* FunctionsTest.swift in Sources */,
+				C66E796A25E0EB9B0048970C /* ApiManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +671,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66E795C25E0E2E00048970C /* AdsListTableViewTest.swift in Sources */,
 				C6942A4725DF899B00245ACF /* ClassifiedsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
