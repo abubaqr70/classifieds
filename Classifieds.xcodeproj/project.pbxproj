@@ -10,6 +10,10 @@
 		67AF50B7B7A321AC20FEEA4A /* Pods_ClassifiedsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD93ECFD6CFC58E78940044C /* Pods_ClassifiedsTests.framework */; };
 		C66E795C25E0E2E00048970C /* AdsListTableViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E795B25E0E2E00048970C /* AdsListTableViewTest.swift */; };
 		C66E796A25E0EB9B0048970C /* ApiManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E796925E0EB9B0048970C /* ApiManagerTest.swift */; };
+		C66E797025E0EF850048970C /* ImageCacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E796F25E0EF850048970C /* ImageCacheObject.swift */; };
+		C66E797825E0EF960048970C /* ImageCacheUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E797725E0EF960048970C /* ImageCacheUIImage.swift */; };
+		C66E797D25E0EFB00048970C /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E797C25E0EFB00048970C /* ImageCache.swift */; };
+		C66E798525E0EFD90048970C /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66E798425E0EFD90048970C /* ImageCacheLoader.swift */; };
 		C67163BB25E0D2170033AE47 /* FunctionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67163BA25E0D2170033AE47 /* FunctionsTest.swift */; };
 		C6942A2225DF899A00245ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6942A2125DF899A00245ACF /* AppDelegate.swift */; };
 		C6942A2925DF899A00245ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6942A2725DF899A00245ACF /* Main.storyboard */; };
@@ -71,6 +75,10 @@
 		C5AD018FB47B53DA8506C7E3 /* Pods-ClassifiedsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassifiedsTests.release.xcconfig"; path = "Target Support Files/Pods-ClassifiedsTests/Pods-ClassifiedsTests.release.xcconfig"; sourceTree = "<group>"; };
 		C66E795B25E0E2E00048970C /* AdsListTableViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListTableViewTest.swift; sourceTree = "<group>"; };
 		C66E796925E0EB9B0048970C /* ApiManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerTest.swift; sourceTree = "<group>"; };
+		C66E796F25E0EF850048970C /* ImageCacheObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheObject.swift; sourceTree = "<group>"; };
+		C66E797725E0EF960048970C /* ImageCacheUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheUIImage.swift; sourceTree = "<group>"; };
+		C66E797C25E0EFB00048970C /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		C66E798425E0EFD90048970C /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
 		C67163BA25E0D2170033AE47 /* FunctionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsTest.swift; sourceTree = "<group>"; };
 		C6942A1E25DF899A00245ACF /* Classifieds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Classifieds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6942A2125DF899A00245ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +170,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C66E796E25E0EF440048970C /* ImageCachingModule */ = {
+			isa = PBXGroup;
+			children = (
+				C66E796F25E0EF850048970C /* ImageCacheObject.swift */,
+				C66E797725E0EF960048970C /* ImageCacheUIImage.swift */,
+				C66E798425E0EFD90048970C /* ImageCacheLoader.swift */,
+				C66E797C25E0EFB00048970C /* ImageCache.swift */,
+			);
+			path = ImageCachingModule;
+			sourceTree = "<group>";
+		};
 		C6942A1525DF899A00245ACF = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +210,7 @@
 				C6942A5D25DF8A0100245ACF /* AppModules */,
 				C6942AA025DF8A8300245ACF /* Helpers */,
 				C6942A6025DF8A2400245ACF /* SupportingFiles */,
+				C66E796E25E0EF440048970C /* ImageCachingModule */,
 			);
 			path = Classifieds;
 			sourceTree = "<group>";
@@ -642,6 +662,7 @@
 				C6942B2625DFABF900245ACF /* ApiManager.swift in Sources */,
 				C6942BA325DFB66000245ACF /* AdsListViewModel.swift in Sources */,
 				C6942B2125DFABEA00245ACF /* Functions.swift in Sources */,
+				C66E797025E0EF850048970C /* ImageCacheObject.swift in Sources */,
 				C6942ACE25DFA79800245ACF /* Extensions.swift in Sources */,
 				C6942B2B25DFAC1000245ACF /* CoreDataManager.swift in Sources */,
 				C6942B9325DFB4A600245ACF /* Ads.swift in Sources */,
@@ -650,8 +671,11 @@
 				C6942BB925DFCBB100245ACF /* AdsDetailViewController.swift in Sources */,
 				C6942BC725DFCDFD00245ACF /* AdDetailImagesCollectionViewCell.swift in Sources */,
 				C6942A2225DF899A00245ACF /* AppDelegate.swift in Sources */,
+				C66E797D25E0EFB00048970C /* ImageCache.swift in Sources */,
 				C6942B7825DFADE900245ACF /* MyCustomUITextField.swift in Sources */,
+				C66E797825E0EF960048970C /* ImageCacheUIImage.swift in Sources */,
 				C6942B3025DFAC1D00245ACF /* Constants.swift in Sources */,
+				C66E798525E0EFD90048970C /* ImageCacheLoader.swift in Sources */,
 				C6942AB625DF8CF900245ACF /* MyCustomUIView.swift in Sources */,
 				C6942A2C25DF899A00245ACF /* Classifieds.xcdatamodeld in Sources */,
 			);

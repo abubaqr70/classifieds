@@ -8,7 +8,7 @@
 import UIKit
 
 class AdDetailImagesCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var adImages: MyCustomImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +20,13 @@ class AdDetailImagesCollectionViewCell: UICollectionViewCell {
             let tap = UITapGestureRecognizer(target: self, action: #selector(imageTappedAction(_:)))
             adImages.addGestureRecognizer(tap)
             adImages.isUserInteractionEnabled = true
+            ///Tried to implemented Image Cache Modulig working fine but sometime crashes app
+            /*  let url = URL(string: objAd?.imageUrlsThumbnails?[0] ?? "")
+             if url != nil {
+             adImage.cacheImageLoad(url!, isShowLoading: true, completionBlock: {_,_ in
+             
+             })
+             }*/
         }
         
     }

@@ -32,10 +32,16 @@ class AdsListingTableViewCell: UITableViewCell {
             self.adPrice.text = objAd?.price
             let newdate = Functions.GetDateStringReturnDate(dateString: objAd?.createdAt ?? "", formate: "h:mm a, MMM d,yyyy") as Date
             self.adPostedDate.text = " \((NSDate.relativePast(for: newdate)))"
-            if objAd?.imageUrls?.count ?? 0 > 0 {
-                adImage.sd_setImage(with: URL(string: objAd?.imageUrls![0] ?? ""))
+            if objAd?.imageUrlsThumbnails?.count ?? 0 > 0 {
+                adImage.sd_setImage(with: URL(string: objAd?.imageUrlsThumbnails![0] ?? ""))
             }
-            
+            ///Tried to implemented Image Cache Modulig working fine but sometime crashes app
+            /*  let url = URL(string: objAd?.imageUrlsThumbnails?[0] ?? "")
+             if url != nil {
+             adImage.cacheImageLoad(url!, isShowLoading: true, completionBlock: {_,_ in
+             
+             })
+             }*/
         }
     }
     

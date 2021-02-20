@@ -49,12 +49,6 @@ class AdsListTableViewTest: XCTestCase {
                 XCTAssertTrue(tableCell.exists, "The \(i) cell is in place on the table")
                 // Does this actually take us to the next screen
                 tableCell.tap()
-                let adName = app.staticTexts["adName"]
-                let adPrice = app.staticTexts["adPrice"]
-                let adPostedDate = app.staticTexts["adPostedDate"]
-                XCTAssertNotNil(adName, adName.value as! String)
-                XCTAssertNotNil(adPrice, adName.value as! String)
-                XCTAssertNotNil(adPostedDate, adName.value as! String)
                 if i == (count - 1) {
                     
                     promise.fulfill()
